@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+.main-nav {
+    background-image: url(pages/images/pc.jpg);
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(6, 6, 6);
+    align-items: flex-start;
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+}
+
+.toggle-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
+    z-index: 1;
+}
+
+img {
+    max-width: 100%;
+}
+
+.item1 {
+    border-bottom: 2px solid white;
+    margin: 4%;
+    align-items: center;
+}
+
+.item1>* {
+    text-decoration: none;
+    color: yellow;
+}
+
+.main-menu--show {
+    transform: translateY(0);
+    padding: 0;
+    margin: 0;
+}
+
+.turnjs {
+    padding: 1%;
+    text-align: center;
+    color: rgb(0, 248, 203);
+    font-size: xxx-large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+aside {
+    border-bottom: 2px solid blue;
+    border-right: 2px solid blue;
+    border-left: 2px solid blue;
+    padding: 1%;
+    font-size: x-large;
+    color: white;
+    text-align: center;
+}
+
+.caja_ {
+    margin-top: 1%;
+    padding: 2%;
+}
+
+.article {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    border: 1px solid gray;
+    border-bottom: none;
+}
+
+article {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    color: rgb(0, 155, 244);
+    display: flex;
+    grid-column: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 1%;
+}
+
+footer {
+    border-top: 2px solid lightblue;
+    padding: 2%;
+    font-size: 100%;
+    color: yellow;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+@media screen and (min-width: 600px) {
+    ul {
+        display: none;
+    }
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 150%;
+        transform: translateY(0);
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+    }
+    .toggle-menu {
+        display: none;
+    }
+    .item1 {
+        grid-column: 1 / 7;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .article {
+        border: 1px solid gray;
+        border-right: none;
+        justify-content: center;
+        align-items: center;
+    }
+}
